@@ -1,0 +1,58 @@
+{% extends 'profiles/base.html' %}
+{% block title %}
+    Најава - {{block.super}}
+{% endblock title %}
+{% block log %}active{% endblock log %}
+{% block forms %}
+<div class="col-lg-4 offset-4" style="margin-top:80px">
+    <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+        <div class="card-body" style="margin-top:20px">
+            <h4 class="card-title">Најава</h4>
+            <br>
+            <form action="{% url 'profiles:login' %}" method="post">
+                {% csrf_token %}
+                {% if form.non_field_errors %}
+                    <div class="form-group">
+                        <ul class="list-group">
+                        {% for error in form.non_field_errors  %}
+                            <li class="list-group-item list-group-item-danger">{{error}}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                {% endif %}
+                <div class="form-group">
+                    <input type="text" class="form-control" name="username" id="id_username" placeholder="Корисничко име или е-маил">
+                    {% for error in form.username.errors %}
+                        <small id="helpId" class="form-text text-danger">{{error}}</small>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" name="password" id="id_password" placeholder="Лозинка">
+                    {% for error in form.password.errors %}
+                        <small id="helpId" class="form-text text-danger">{{error}}</small>
+                    {% endfor %}
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="form-control btn btn-success" name="submit">Најави се</button>
+                    <small class="form-text text-center text-muted">Отвори нова сметка <strong><a class="text-primary" href="{% url 'profiles:register' %}">Регистрација</a></strong></small>
+                </div>
+                <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" name="" id="" value="checkedValue" checked>
+                        Запомни ме
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock forms %}
+{% block footer %}
+<footer class="bg-white text-dark mt-4" style="width:100%; right:0; bottom:0; left:0; padding:1rem; position:absolute">
+    <center><strong><a href="{% url 'profiles:about' %}">© 2018 Барам.мк</a></strong></center>
+</footer>
+{% endblock footer %}
+
+
+
+

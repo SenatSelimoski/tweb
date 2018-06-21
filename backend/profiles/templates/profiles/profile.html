@@ -1,0 +1,20 @@
+
+{% block settings %}
+{% if request.user.is_authenticated %}
+<div class="container" >
+    <div class="card" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)">
+        <center>
+            <img style="margin-top:45px" src="{{request.user.profile.get_avatar}}" width="120px" height="120px" class="rounded-circle" alt="">
+        </center>
+            <div class="card-body">
+                <h2 class="card-title">{{request.user.username}}</h1>
+                <p class="card-text">Name: {{request.user.profile.first_name}}</p> 
+                <p class="card-text">Last name: {{request.user.profile.last_name}}</p>
+                <p class="card-text">E-mail address: {{request.user.email}}</p>
+                <p class="card-text">Location: {{request.user.profile.location}}</p>
+                <p class="card-text">Contact: {{request.user.profile.contact}}</p>
+            </div>
+    </div>
+</div
+{% endif %}
+{% endblock settings %}
