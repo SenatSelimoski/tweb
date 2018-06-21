@@ -1,8 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .vscode
 settings.json
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> fd507c059efd4048420eda6b6573a8e19935d8b0
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -108,6 +111,7 @@ venv.bak/
 # mypy
 .mypy_cache/
 <<<<<<< HEAD
+<<<<<<< HEAD
 migrations
 */migrations
 */migrations/*
@@ -115,3 +119,5 @@ migrations
 */admin/*
 =======
 >>>>>>> origin/master
+=======
+>>>>>>> fd507c059efd4048420eda6b6573a8e19935d8b0
