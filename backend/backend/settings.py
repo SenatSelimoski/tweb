@@ -89,7 +89,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': '',
+        'NAME': 'tweb_db',
+        'HOST': 'localhost',
+        'USER': 'tweb',
+        'PASSWORD': 'selimoski',
+        'PORT': '5432'
     }
 }
 
