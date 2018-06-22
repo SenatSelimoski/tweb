@@ -10,7 +10,7 @@ from .forms import UserCreateForm,LoginForm
 from .models import Profile,User
 
 class BaseView(generic.TemplateView):
-    template_name = 'profiles/index.html'
+    template_name = 'profiles/base.html'
     
     def get_context_data(self, *args, **kwargs):
         context = super(BaseView, self).get_context_data(*args, **kwargs)
