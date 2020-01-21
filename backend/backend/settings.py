@@ -92,7 +92,7 @@ DATABASES = {
         'NAME': 'tweb_db',
         'HOST': 'localhost',
         'USER': 'tweb',
-        'PASSWORD': 'selimoski',
+        'PASSWORD': 'password123',
         'PORT': '5432'
     }
 }
